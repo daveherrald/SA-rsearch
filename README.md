@@ -69,8 +69,6 @@ Edit the search in the file $SPLUNK_HOME/etc/apps/SA-rsearch/bin/rinputlookup.py
     """.format(user)
 ```
 
-In most cases, you will want to restrict the results using a subsequent | search or | where command in the search. This yields the effect of allowing user to only see certain results from the lookup table. In this case you could easily configure the search to only return the employee data for the user running the search.
-
 ## Yep it's kludgey!
 We know! Again, use at your own risk.
 
