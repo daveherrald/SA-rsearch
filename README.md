@@ -30,7 +30,17 @@ HOST = 127.0.0.1
 PORT = 8089
 ```
 
-Next create the Splunk user. Make sure the username and password match what is specified in the config file above. The user should be granted the privileged_reader role. NOTE: privileged_reader role is defined by this app when it is installed.
+Next create the Splunk user. Make sure the username and password match what is specified in the config file above. The user should be granted only the privileged_reader role. 
+
+NOTE: the privileged_reader role is defined by this app when it is installed.
 
 ## Try it out
+For these sceanrios, create a simple Splunk user with the role of 'user'. This user will mimic a non-privileged user who you want to be able to access a restricted resource. NOTE: This is a different user than the one specified above.
+
+### Scenario 1 - Read a restricted lookup table
+In this scenario, we will allow the unprivileged user access to a restricted lookup table.
+
+Log in as the unprivileged user and attempt to read the lookup.
+
+
 
