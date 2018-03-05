@@ -21,7 +21,7 @@ $ $SPLUNK_HOME/bin/splunk restart
 ```
 
 ## Configuration
-Edit $SPLUNK_HOME/etc/aps/SA-rsearch/rsearch.config to configure a strong password.
+Edit $SPLUNK_HOME/etc/apps/SA-rsearch/rsearch.config to configure a strong password.
 ```
 [rsearch]
 USER = privileged_splunk_user
@@ -30,7 +30,7 @@ HOST = 127.0.0.1
 PORT = 8089
 ```
 
-Next create the Splunk user. Make sure the username and password match what is specified in the config file above. The user should be granted the privileged_reader role.
+Next create the Splunk user. Make sure the username and password match what is specified in the config file above. The user should be granted the privileged_reader role. NOTE: privileged_reader role is defined by this app when it is installed.
 
 ## Try it out
 
