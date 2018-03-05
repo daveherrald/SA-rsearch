@@ -48,7 +48,7 @@ Now, as the same unprivileged user, run the custom search command called rinputl
 
 ![](https://github.com/daveherrald/SA-rsearch/raw/master/images/rinputlookup.png "Logo Title Text 1")
 
-##Customize
+## Customize
 
 Edit the search in the file $SPLUNK_HOME/etc/apps/SA-rsearch/bin/rinputlookup.py. The search appears as follows:
 
