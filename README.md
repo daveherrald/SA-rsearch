@@ -30,4 +30,7 @@ HOST = 127.0.0.1
 PORT = 8089
 ```
 
-## Use
+Next create the Splunk user. Make sure the username and password match what is specified in the config file above. The user should be granted the privileged_reader role.
+
+## Try it out
+
