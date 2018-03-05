@@ -21,7 +21,7 @@ $ $SPLUNK_HOME/bin/splunk restart
 ```
 
 ## Configuration
-Edit $SPLUNK_HOME/etc/apps/SA-rsearch/rsearch.config to configure a strong password.
+Edit $SPLUNK_HOME/etc/apps/SA-rsearch/bin/rsearch.config to configure a strong password.
 ```
 [rsearch]
 USER = privileged_splunk_user
@@ -47,6 +47,16 @@ Log in as the unprivileged user and attempt to read the lookup. Splunk will repo
 Now, as the same unprivileged user, run the custom search command called rinputlookup, and observe the restricted results.
 
 ![](https://github.com/daveherrald/SA-rsearch/raw/master/images/rinputlookup.png "Logo Title Text 1")
+
+##Customize
+
+Edit the search in the file $SPLUNK_HOME/etc/apps/SA-rsearch/bin/rinputlookup.py. The search appears as follows:
+
+```
+            searchquery = """
+            | inputlookup employeeinfo.csv
+            """
+```
 
 
 
