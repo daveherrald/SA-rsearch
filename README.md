@@ -10,7 +10,7 @@ The code in this app provides a mechanism for bypassing access controls in Splun
 **Beware that this app stores Splunk usernames and passwords in plain text in a configuration file in the filesystem of the Splunk search head.** This is generally considered a bad practice. If this violates your policies, standards, or compliance mandates, you should not install this app.
 
 
-*No guarantees are made about the efficacy of this code. Use at your own risk.*
+*No guarantees are made about the efficacy of this app. Use at your own risk.*
 
 
 ## Installation
