@@ -35,7 +35,7 @@ Next create the Splunk user. Make sure the username and password match what is s
 NOTE: the privileged_reader role is defined by this app when it is installed.
 
 ## Try it out
-For these sceanrios, create a simple Splunk user with the role of 'user'. This user will mimic a non-privileged user who you want to be able to access a restricted resource. NOTE: This is a different user than the one specified above.
+For these sceanrios, create a simple Splunk user called 'luser' with the role of 'user'. This user will mimic a non-privileged user who you want to be able to access a restricted resource. NOTE: This is a different user than the one specified above.
 
 ### Scenario 1 - Read a restricted lookup table
 In this scenario, we will allow the unprivileged user access to a restricted lookup table called employeedata.csv (included wit this app). 
