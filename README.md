@@ -14,7 +14,11 @@ The code in this app provides a mechanism for bypassing access controls in Splun
 
 
 ## Installation
-Clone this repository in $SPLUNK_HOME/etc/apps
+1. Clone this repository in $SPLUNK_HOME/etc/apps
+```
+$ cd $SPUNK_HOME
+$ git clone 
+
 
 
 
