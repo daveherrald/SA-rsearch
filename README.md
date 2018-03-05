@@ -14,13 +14,20 @@ The code in this app provides a mechanism for bypassing access controls in Splun
 
 
 ## Installation
-1. Clone this repository in $SPLUNK_HOME/etc/apps
 ```
 $ cd $SPLUNK_HOME/etc/apps
 $ git clone https://github.com/daveherrald/SA-rsearch.git
 $ $SPLUNK_HOME/bin/splunk restart
 ```
 
-
+## Configuration
+Edit $SPLUNK_HOME/etc/aps/SA-rsearch/rsearch.config to configure a strong password.
+```
+[rsearch]
+USER = privileged_splunk_user
+PASS = <put a strong password here, and ditch the angle brackets>
+HOST = 127.0.0.1
+PORT = 8089
+```
 
 ## Use
