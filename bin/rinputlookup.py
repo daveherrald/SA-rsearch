@@ -65,8 +65,8 @@ class rinputlookupCommand(ReportingCommand):
 
         try:
             searchquery = """
-            | inputlookup employeeinfo.csv
-            """
+            | inputlookup employeeinfo.csv | search user={}
+            """.format(user)
             kwargs_oneshot = {'count': 0}
             service = client.connect(host=HOST, port=PORT, username=USER, password=PASSWORD)
             searchresults = service.jobs.oneshot(searchquery, **kwargs_oneshot)
