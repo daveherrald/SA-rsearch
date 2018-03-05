@@ -40,7 +40,8 @@ For these sceanrios, create a simple Splunk user with the role of 'user'. This u
 ### Scenario 1 - Read a restricted lookup table
 In this scenario, we will allow the unprivileged user access to a restricted lookup table.
 
-Log in as the unprivileged user and attempt to read the lookup.
+Log in as the unprivileged user and attempt to read the lookup. Splunk will report 'No results found...' as expected.
+
 
 
 
