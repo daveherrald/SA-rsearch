@@ -7,9 +7,11 @@ The code in this app provides a mechanism for bypassing access controls in Splun
 * If you are inexperienced with Splunk or if you cannot understand exactly what every line of the included code is doing, you should not install this app. 
 * You should carefully analyze this code and perform a risk assessment before installing this app on a production system. 
 
+Beware that this app stores Splunk usernames and passwords in plain text in a configuration file in the filesystem of the Splunk search head. This is generally considered a bad practice. If this violates your policies, standards, or compliance mandates, you should not install this app.
+
+
 *No guarantees are made about the efficacy of this code. Use at your own risk.*
 
-Beware that this app stores Splunk usernames and passwords in plain text in a configuration file in the filesystem of the Splunk search head. This is generally considered a bad practice. If this violates your policies, standards, or compliance mandates, do not install this app.
 
 ## Installation
 Clone this repository in $SPLUNK_HOME/etc/apps
