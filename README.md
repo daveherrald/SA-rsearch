@@ -80,7 +80,8 @@ XDG_DATA_HOME = /opt/splunk/etc/apps/SA-rsearch/bin/
 XDG_SECRET_HOME = /opt/splunk/etc/apps/SA-rsearch/bin
 ```
 
-Log into Splunk and create the Splunk user. Make sure the username and password match what is specified in the config file above. The user should be granted only the privileged_reader role. 
+### Create Privileged Splunk user
+Log into Splunk and create the Splunk user. Make sure the username matches the values set in the `USER` key in `rsearch.config`. Make sure the password matches what was set in the keyring for that user. The user should be granted only the `privileged_reader` role. 
 
 NOTE: the privileged_reader role is defined by this app when it is installed.
 
