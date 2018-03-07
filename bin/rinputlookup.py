@@ -56,7 +56,7 @@ class rinputlookupCommand(ReportingCommand):
         the Splunk search head where this app is installed.
         '''
         CONF_FILE = make_splunkhome_path(['etc', 'apps', 'SA-rsearch', 'bin', 'rsearch.config'])
-        parsed_config = utils._parse_config(CONF_FILE, logger_admin)
+        parsed_config = utils._parse_config(CONF_FILE)
         PASSWORD = utils._get_password(parsed_config.get('SERVICE'), parsed_config.get('USER'))
         resultstoreturn = []
 
