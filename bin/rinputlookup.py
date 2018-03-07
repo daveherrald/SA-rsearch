@@ -9,6 +9,9 @@ import ConfigParser
 import sys
 import json
 import time
+import keyring
+import os
+from rsearch_utils import utils
 
 def setup_logger(level, filename):
     '''
@@ -53,14 +56,8 @@ class rinputlookupCommand(ReportingCommand):
         the Splunk search head where this app is installed.
         '''
         CONF_FILE = make_splunkhome_path(['etc', 'apps', 'SA-rsearch', 'bin', 'rsearch.config'])
-        Config = ConfigParser.ConfigParser()
-        parsed_conf_files = Config.read(CONF_FILE)
-        if not CONF_FILE in parsed_conf_files:
-           logger_admin.error('Could not read config file: %s' % (CONF_FILE))
-        USER = Config.get('rsearch', 'USER')
-        PASSWORD = Config.get('rsearch', 'PASS')
-        HOST = Config.get('rsearch', 'HOST')
-        PORT = Config.get('rsearch', 'PORT')
+        parsed_config = utils._parse_config(CONF_FILE)
+        PASSWORD = utils._get_password(parsed_config.get('SERVICE'), parsed_config.get('USER'))
         resultstoreturn = []
 
         try:
@@ -68,7 +65,10 @@ class rinputlookupCommand(ReportingCommand):
             | inputlookup employeeinfo.csv | search user={}
             """.format(user)
             kwargs_oneshot = {'count': 0}
-            service = client.connect(host=HOST, port=PORT, username=USER, password=PASSWORD)
+            service = client.connect(host=parsed_config.get('HOST'),
+                                     port=parsed_config.get('PORT'),
+                                     username=parsed_config.get('USER'),
+                                     password=PASSWORD)
             searchresults = service.jobs.oneshot(searchquery, **kwargs_oneshot)
             reader = results.ResultsReader(searchresults)
             if reader:
