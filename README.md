@@ -83,7 +83,7 @@ XDG_SECRET_HOME = /opt/splunk/etc/apps/SA-rsearch/bin
 ### Create Privileged Splunk user
 Log into Splunk and create the Splunk user. Make sure the username matches the values set in the `USER` key in `rsearch.config`. Make sure the password matches what was set in the keyring for that user. The user should be granted only the `privileged_reader` role. 
 
-NOTE: the privileged_reader role is defined by this app when it is installed.
+**NOTE**: the privileged_reader role is defined by this app when it is installed.
 
 ### Keyring File Reference
 **Encrypted Keyring** - `$SPLUNK_HOME/etc/apps/SA-rsearch/bin/python_keyring/crypted_pass.cfg`
