@@ -44,7 +44,7 @@ Options:
 
 ```
 
-To store the Splunk user `shaskell` in the `prod` service run the following command. If this is the first time you're adding a user, you will be prompted input a password to secure the keyring. **Don't lose this password or you will need to delete and re-create the keyring. You will need to use this password in the next section**
+To store the Splunk user `shaskell` in the `prod` service, run the following command. If this is the first time you're adding a user, you will be prompted input a password to secure the keyring. **Don't lose this password or you will need to delete and re-create the keyring. You will need to use this password in the [next section](#store-keyring-password).**
 
 ```
 # $SPLUNK_HOME/bin/splunk cmd python keyring-cli set prod shaskell
@@ -59,7 +59,7 @@ Use the **set** command on an existing **SERVICE** and **USERNAME** combo to upd
 ### Store Keyring Password
 You must store the keyring password in `$SPLUNK_HOME/etc/apps/SA-rsearch/bin/python_keyring/.secret` for the custom search commands to access encrypted passwords in the keyring.
 
-Replace `mykeyringpassword` with the password you set for the keyring in the previous step. Make sure it's wrapped in single quotes. Be sure to lock the file down to the user running splunkd (typically root) and set to mode 600.
+Replace `mykeyringpassword` with the password you set for the keyring in the [previous section](#createupdatedelete-splunk-privileged-accounts). Make sure it's wrapped in single quotes. Be sure to lock the file down to the user running splunkd (typically root) and set to mode 600.
 
 ```
 # echo 'mykeyringpassword' > $SPLUNK_HOME/etc/apps/SA-rsearch/bin/python_keyring/.secret
