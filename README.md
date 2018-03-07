@@ -67,7 +67,7 @@ Replace `mykeyringpassword` with the password you set for the keyring in the [pr
 ```
 
 ### rsearch config file
-Edit $SPLUNK_HOME/etc/apps/SA-rsearch/bin/rsearch.config and modify to suit your environment. Set the full path to your Splunk install for the `XDG_*` keys.
+Edit `$SPLUNK_HOME/etc/apps/SA-rsearch/bin/rsearch.config` and modify to suit your environment. Set the full path to your Splunk install for the `XDG_*` keys.
 
 ```
 [rsearch]
